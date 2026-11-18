@@ -13,6 +13,7 @@ export default defineConfig([
     "playwright-report",
     "test-results",
     "src/routeTree.gen.ts",
+    "server", // linted by its own oxlint setup
   ]),
   {
     files: ["**/*.{ts,tsx}"],

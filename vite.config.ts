@@ -15,6 +15,10 @@ export default defineConfig({
       "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
+  server: {
+    // Forward API calls to the Nest server (server/), which holds the TypeSafe key.
+    proxy: { "/api": "http://localhost:3000" },
+  },
   test: {
     environment: "jsdom",
     setupFiles: ["./src/test/setup.ts"],

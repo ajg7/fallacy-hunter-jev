@@ -24,6 +24,20 @@ Tooling: ESLint · Prettier · Vitest + React Testing Library · Playwright
 
 First-time Playwright setup: `npx playwright install chromium`.
 
+## Backend (`server/`)
+
+A NestJS API with the [TypeSafe](https://docs.typesafe.ai) SDK (`@typesafe-ai/sdk`, model Jev)
+installed. It has its own `package.json`: run `npm --prefix server install` once.
+
+1. Copy `server/.env.example` to `server/.env` and set `TYPESAFE_API_KEY`. The key stays on the server.
+2. `npm run dev:server` starts it on port 3000, with routes under `/api`.
+3. `npm run dev` proxies `/api` to it, so the frontend calls `/api/...` directly.
+
+| Command                | What it does                                       |
+| ---------------------- | -------------------------------------------------- |
+| `npm run dev:server`   | Start the API in watch mode                        |
+| `npm run check:server` | Typecheck + lint + format check + unit & e2e tests |
+
 ## Code style
 
 - Double quotes everywhere (enforced by Prettier).

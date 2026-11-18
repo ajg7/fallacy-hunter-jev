@@ -37,3 +37,6 @@ playwright/.cache
 
 # TanStack
 .tanstack
+
+# TypeScript incremental build info
+*.tsbuildinfo
