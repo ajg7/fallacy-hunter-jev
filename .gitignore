@@ -40,3 +40,8 @@ playwright/.cache
 
 # TypeScript incremental build info
 *.tsbuildinfo
+
+# Claude Code: machine-local settings and session state (skills and build-progress stay tracked)
+.claude/settings.local.json
+.claude/*.local.*
+.claude/worktrees/
